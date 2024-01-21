@@ -41,3 +41,31 @@
   .title-textbox::placeholder {
     color: #04070D;
   }
+
+  @media screen and (max-width: 1000px){
+    button {
+        width: 60px;
+    }
+    .search-bar-container{
+        padding: 30px;
+
+    }
+    .App{
+      margin-top: 30px;
+      display: block;
+    }
+}
+
+@media screen and (max-width: 1500px){
+  button {
+      width: 60px;
+  }
+  .search-bar-container{
+      padding: 50px;
+
+  }
+  /* .App{
+    margin-top: 30px;
+    display: block;
+  } */
+}

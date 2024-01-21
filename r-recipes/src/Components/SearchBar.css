@@ -39,7 +39,9 @@ button {
     border-radius: 0 10px 10px 0; /* Round the top right and bottom right corners */
     background-color: #2E6B6B; /* Set the background color */
     border: none; /* Remove the border */
-    color: transparent; /* Hide the text */
+    /* color: transparent; Hide the text */
+    color:#F2E8D5;
+    font-weight: bold;
     cursor: pointer; /* Show the pointer cursor */
     transition: background-color 0.25s;
     width: 125px;
@@ -55,4 +57,12 @@ button:active {
 #search-icon{
     color:#2E6B6B;
 }
-
+/* Hello */
+@media screen and (max-width: 1000px){
+    button {
+        width: 60px;
+    }
+    /* input {
+        padding-left: 0px;
+    } */
+}

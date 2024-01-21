@@ -11,7 +11,7 @@ export const SearchBar = () =>  {
             value={input}
             onChange={(e) => setInput(e.target.value)} 
             />
-            <button type="button">Enter</button>
+            <button type="button">Search</button>
         </div>
     );
 }
