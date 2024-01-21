@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './RecipeCard.css';
 
 
 const RecipeCard = ({ title, description, image, recipeLink }) => {

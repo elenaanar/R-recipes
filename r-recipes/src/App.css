@@ -48,7 +48,7 @@
     }
     .search-bar-container{
         padding: 30px;
-
+        flex-direction: column
     }
     .App{
       margin-top: 30px;
@@ -68,4 +68,11 @@
     margin-top: 30px;
     display: block;
   } */
+}
+
+.recipe-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Adjust the gap between cards as needed */
+  margin-top: 20px;
 }
