@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import RecipeCard from "./Components/RecipeCard";
 import { SearchBar } from "./Components/SearchBar";
+import Sidebar from "./Components/Sidebar";
 function App() {
   const [data, setData] = useState([]);
   const [ingredients, setIngredients] = useState([
@@ -49,6 +50,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Sidebar/>
     </div>
   );
 }
