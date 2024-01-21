@@ -36,8 +36,9 @@ class Recipe:
 output = subprocess.run("ls -ltr recipes/*.html | cut -d ' ' -f 9", capture_output=True, shell=True, text=True)
 recipes = [item for item in str(output.stdout).split()]
 
-for recipe in recipes:
+for recipe in recipes[0:1]:
     with open(recipe, 'r', encoding='UTF-8') as inputFile:
+        print(recipe)
         current_recipe = Recipe()
         url = subprocess.run("head -n 1 %s" % (recipe[:-5] + ".txt"), shell=True, capture_output=True)
         current_recipe.url = str(url.stdout)[2:-3]
@@ -95,4 +96,9 @@ for recipe in recipes:
             print("No tags could be find for %s, and got error besides AttributeError. Wtf?" % current_recipe.title)
 
         # current_recipe.print_info()
-        current_recipe.write_data(CSV_PATH)
+
+    #ADD A DONE TAG FOR THE THING
+
+        # mark done
+        # subprocess.run("mv -v %s recipes/done%s.html" % ())
+        # current_recipe.write_data(CSV_PATH)
