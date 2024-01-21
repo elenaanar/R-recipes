@@ -41,7 +41,6 @@ function App() {
                   key={r._id}
                   title={r.title}
                   description={r.description}
-                  image={r.img}
                   recipeLink={r.url}
                 ></RecipeCard>
               );
