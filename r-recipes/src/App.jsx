@@ -16,7 +16,7 @@ function App() {
   ]);
   return (
     <div className="App">
-      <div className="top-bar"></div>
+
       <div className="main-page">
         <div className="search-bar-container">
           <div className="title-textbox">R'recipes</div>

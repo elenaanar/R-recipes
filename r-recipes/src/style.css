@@ -21,6 +21,10 @@
     margin-top: 70px; /* Adjust margin-top to 70px */
 }
 
+.hamburger {
+    object-fit: cover;
+}
+
 .item {
     margin: 10px 0;
     padding: 10px;

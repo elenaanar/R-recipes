@@ -16,6 +16,7 @@ export const SearchBar = ({data, setData, ingredients, setIngredients}) =>  {
         setData(res.data);
     }
     return(
+
        <div className='input-wrapper'>  
             {/*<FaSearch id="search-icon" />*/}
             <input type="text" placeholder="Type to search..."
@@ -25,6 +26,7 @@ export const SearchBar = ({data, setData, ingredients, setIngredients}) =>  {
             />
             <button type="button" onClick={handleSubmit}>Search</button>
         </div>
+        
     );
 }
 
