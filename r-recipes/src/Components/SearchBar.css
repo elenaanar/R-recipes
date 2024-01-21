@@ -67,3 +67,20 @@ button:active {
         padding-left: 0px;
     } */
 }
+
+
+.title-textbox {
+   
+    border: solid;
+    border-radius: 20px; /* Adjust the border-radius to control the roundness */
+    padding: 20px;
+    background: linear-gradient(to bottom, #1a6a6a, #93bb6e);
+    transition: background 0.5s ease;
+    color:#90cc74;
+    text-shadow: 2px 2px 4px #000; /* Add text shadow for a gradient-like effect */
+    font-style: italic;
+  }
+
+
+
+ 
