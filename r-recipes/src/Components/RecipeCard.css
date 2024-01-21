@@ -8,8 +8,9 @@
   margin: 16px;
   max-width: 30%;
   max-height: 250px;
-  box-shadow: 0 2px 4px rgba(151, 104, 23, 0.663);
+  box-shadow: 0 2px 4px rgba(13, 113, 85, 0.824);
   padding-bottom: 15px;
+  background-color: #F2E8D5;
 }
 
 .recipe-details {
