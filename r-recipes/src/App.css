@@ -42,6 +42,15 @@
     color: #04070D;
   }
 
+  .main-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1500px;
+  }
+
   @media screen and (max-width: 1000px){
     button {
         width: 60px;
@@ -69,3 +78,4 @@
     display: block;
   } */
 }
+
