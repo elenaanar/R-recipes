@@ -8,14 +8,13 @@ const ObjectId = require("mongodb").ObjectId;
 
 routes.route("/search_recipes").get(async (req, res) => {
     let db_connect = dbo.getDb();
-    let collection = db_connect.collection("sample");
+    let collection = db_connect.collection("all_recipes");
     let r = await collection.find().toArray().then((r)=>{return r});
-    console.log(r);
     const query = [
         {
           $search:
             {
-              index: "default",
+              index: "search",
               text: {
                 query: req.query.ingredients,
                 path: "ingredients",
@@ -23,10 +22,16 @@ routes.route("/search_recipes").get(async (req, res) => {
             },
         },
         {
-          $match:
-            {
-              tag: req.query.search,
-            },
+            $match:{
+                $or:[
+                     {
+                        tag: {$regex: /req.query.search/i},
+                     },
+                     {
+                        title: {$regex: /req.query.search/i}
+                     }
+                ]
+            }
         },
       ]
     let result = await collection
@@ -35,14 +40,14 @@ routes.route("/search_recipes").get(async (req, res) => {
     .toArray()
     .then((r)=>{return r})
     
-    console.log(result)
-    
-    let arr = req.query.ingredients + " " + req.query.search
+    let arr = req.query.ingredients;
+    arr.push(req.query.search)
+    //arr = req.query.ingredients + " " + req.query.search;
     const query2 = [
         {
           $search:
             {
-              index: "default",
+              index: "search",
               text: {
                 query: arr,
                 path: "ingredients",
@@ -56,14 +61,8 @@ routes.route("/search_recipes").get(async (req, res) => {
     .limit(100)
     .toArray()
     .then((r)=>{return r});
-    
-    console.log(result2)
-    if(result.length == 0){
-        res.json(result2);
-    }
-    else{
-        res.json(result);
-    }
+    result = result.concat(result2);
+    res.json(result);
     
 })
 
