@@ -8,7 +8,7 @@ import TopBar from './TopBar';
 
 
 const Sidebar = ({items, setItems, setIngredients}) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const handleAddItem = (item) => {
     // Update the items state with the new item
     setItems([...items, item]);
