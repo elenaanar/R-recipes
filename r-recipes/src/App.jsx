@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <div className="top-bar">
-      <div className="title-textbox">R'recipes</div>
+      <div className="title-textbox">R'Recipes</div>
       </div>
       <div className="main-page">
         <div className="search-bar-container">
