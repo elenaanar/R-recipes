@@ -1,33 +1,29 @@
+// RecipeCard.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 import "./RecipeCard.css"
 
 
-const RecipeCard = ({ title, description, image, recipeLink }) => {
+const truncateText = (text, maxLength) => {
+  if (text.length > maxLength) {
+    return text.substring(0, maxLength) + '...';
+  }
+  return text;
+};
+
+const RecipeCard = ({ title, description, recipeLink }) => {
+  const truncatedDescription = truncateText(description, 100);
   return (
     <Grid container className="recipe-card">
-      <Grid item xs={6}>
-        <img src={image} alt={title} className="recipe-image" style={{minHeight: '100%'}} />
-      </Grid>
-      <Grid item xs={6} className="recipe-details">
+      <Grid item xs={12} className="recipe-details">
         <h2 className="recipe-title">{title}</h2>
-        <p className="recipe-description">{description}</p>
+        <p className="recipe-description">{truncatedDescription}</p>
         <a href={recipeLink} target="_blank" rel="noopener noreferrer">
           <button className="recipe-button">View Recipe</button>
       </a>
       </Grid>
     </Grid>
-    // <div className="recipe-card">
-    //   <img src={image} alt={title} className="recipe-image" style={{ maxWidth: '100%', maxHeight: '200px' }} />
-    //   <div className="recipe-details">
-    //     <h2 className="recipe-title">{title}</h2>
-    //     <p className="recipe-description">{description}</p>
-    //     <a href={recipeLink} target="_blank" rel="noopener noreferrer">
-    //       <button className="recipe-button">View Recipe</button>
-    //     </a>
-    //   </div>
-    // </div>
   );
 };
 

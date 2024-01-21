@@ -5,21 +5,17 @@ import { SearchBar } from "./Components/SearchBar";
 import Sidebar from "./Components/Sidebar";
 function App() {
   const [data, setData] = useState([]);
-  const [ingredients, setIngredients] = useState([
-    "milk",
-    "sugar",
-    "flour",
-    "salt",
-    "chicken",
-    "apple",
-    "banana",
-  ]);
+  const [items, setItems] = useState([]);
+  let localData = JSON.parse(localStorage.getItem("items"));
+  if (localData == null) {
+    localData = [];
+  }
+  const [ingredients, setIngredients] = useState(localData);
+  console.log(ingredients);
   return (
     <div className="App">
-
       <div className="main-page">
         <div className="search-bar-container">
-          <div className="title-textbox">R'recipes</div>
           <SearchBar
             data={data}
             setData={setData}
@@ -42,7 +38,6 @@ function App() {
                   key={r._id}
                   title={r.title}
                   description={r.description}
-                  image={r.img}
                   recipeLink={r.url}
                 ></RecipeCard>
               );
@@ -50,7 +45,12 @@ function App() {
           </div>
         </div>
       </div>
-      <Sidebar/>
+      <Sidebar
+        items={items}
+        setItems={setItems}
+        setIngredients={setIngredients}
+      />
+      {console.log(items)}
     </div>
   );
 }
