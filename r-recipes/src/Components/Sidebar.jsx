@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import ItemList from './ItemList';
 import InputComponent from './InputComponent';
+import "../style.css"
 
 const Sidebar = () => {
   const [items, setItems] = useState([]);
