@@ -1,0 +1,68 @@
+.input-wrapper{
+    background:#F2E8D5;
+    width: 300%;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #04070D;
+    border-width: 3px;
+    height: 75px;
+    box-shadow: inset 0px 0px 8px #E5C995; 
+    display: flex;
+    align-items: center;
+    min-width: 200px;
+    max-width: 1000px;
+    position: relative;
+    padding-left:10px;
+}
+
+input{
+    background-color: transparent;
+    border:  none;
+    height: 100%;
+    font-size:1.25rem;
+    width: 100%;
+    margin-left: 5px;
+    flex: 1;
+}
+
+input::placeholder {
+    color: #C6A364; /* Replace with the color you want */
+}
+
+input:focus{
+    outline: none;
+}
+
+button {
+    margin-left: 10px;
+    height: 100%; /* Make the button the same height as the search bar */
+    border-radius: 0 10px 10px 0; /* Round the top right and bottom right corners */
+    background-color: #2E6B6B; /* Set the background color */
+    border: none; /* Remove the border */
+    /* color: transparent; Hide the text */
+    color:#F2E8D5;
+    font-weight: bold;
+    cursor: pointer; /* Show the pointer cursor */
+    transition: background-color 0.25s;
+    width: 125px;
+}
+
+button:focus{
+    outline: none; 
+}
+
+button:active {
+    background-color: #194040; /* Change the background color on click */
+}
+#search-icon{
+    color:#2E6B6B;
+}
+/* Hello */
+@media screen and (max-width: 1000px){
+    button {
+        width: 60px;
+    }
+    /* input {
+        padding-left: 0px;
+    } */
+}
