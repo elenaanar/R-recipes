@@ -4,6 +4,7 @@
     border-radius: 15px;
     border-style: solid;
     border-color: #04070D;
+    border-width: 3px;
     height: 75px;
     box-shadow: inset 0px 0px 8px #E5C995; 
     display: flex;
@@ -36,11 +37,12 @@ button {
     margin-left: 10px;
     height: 100%; /* Make the button the same height as the search bar */
     border-radius: 0 10px 10px 0; /* Round the top right and bottom right corners */
-    background-color: #194040; /* Set the background color */
+    background-color: #2E6B6B; /* Set the background color */
     border: none; /* Remove the border */
     color: transparent; /* Hide the text */
     cursor: pointer; /* Show the pointer cursor */
     transition: background-color 0.25s;
+    width: 125px;
 }
 
 button:focus{
@@ -48,6 +50,9 @@ button:focus{
 }
 
 button:active {
-    background-color: #0A2525; /* Change the background color on click */
-  }
+    background-color: #194040; /* Change the background color on click */
+}
+#search-icon{
+    color:#2E6B6B;
+}
 
