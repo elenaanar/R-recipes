@@ -12,37 +12,6 @@ function App() {
       image: "https://www.saltandlavender.com/wp-content/uploads/2020/04/tomato-goat-cheese-pasta-2-1200x1752.jpg",
       recipeLink: "https://www.saltandlavender.com/tomato-goat-cheese-pasta/",
     },
-    {
-      title: "TOMATO GOAT CHEESE PASTA",
-      description: "This tomato goat cheese pasta recipe is simple, fresh, and easy to make.",
-      image: "https://www.saltandlavender.com/wp-content/uploads/2020/04/tomato-goat-cheese-pasta-2-1200x1752.jpg",
-      recipeLink: "https://www.saltandlavender.com/tomato-goat-cheese-pasta/",
-    },
-    {
-      title: "TOMATO GOAT CHEESE PASTA",
-      description: "This tomato goat cheese pasta recipe is simple, fresh, and easy to make.",
-      image: "https://www.saltandlavender.com/wp-content/uploads/2020/04/tomato-goat-cheese-pasta-2-1200x1752.jpg",
-      recipeLink: "https://www.saltandlavender.com/tomato-goat-cheese-pasta/",
-    },
-    {
-      title: "TOMATO GOAT CHEESE PASTA",
-      description: "This tomato goat cheese pasta recipe is simple, fresh, and easy to make.",
-      image: "https://www.saltandlavender.com/wp-content/uploads/2020/04/tomato-goat-cheese-pasta-2-1200x1752.jpg",
-      recipeLink: "https://www.saltandlavender.com/tomato-goat-cheese-pasta/",
-    },
-    {
-      title: "TOMATO GOAT CHEESE PASTA",
-      description: "This tomato goat cheese pasta recipe is simple, fresh, and easy to make.",
-      image: "https://www.saltandlavender.com/wp-content/uploads/2020/04/tomato-goat-cheese-pasta-2-1200x1752.jpg",
-      recipeLink: "https://www.saltandlavender.com/tomato-goat-cheese-pasta/",
-    },
-    {
-      title: "TOMATO GOAT CHEESE PASTA",
-      description: "This tomato goat cheese pasta recipe is simple, fresh, and easy to make.",
-      image: "https://www.saltandlavender.com/wp-content/uploads/2020/04/tomato-goat-cheese-pasta-2-1200x1752.jpg",
-      recipeLink: "https://www.saltandlavender.com/tomato-goat-cheese-pasta/",
-    },
-    // Add more recipes as needed
   ];
 
   return (
