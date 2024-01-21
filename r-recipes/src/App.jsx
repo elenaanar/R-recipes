@@ -14,12 +14,14 @@ function App() {
           <SearchBar data={data} setData={setData} ingredients={ingredients} setIngredients={setIngredients}/>
           {console.log(data)}
           </div>
-        <RecipeCard
-          title="Delicious Pasta"
-          description="A mouth-watering pasta recipe with a rich tomato sauce."
-          image="https://www.jocooks.com/wp-content/uploads/2018/12/creamy-tomato-chicken-pasta-1-20.jpg"
-          recipeLink="https://www.foodnetwork.com/recipes/food-network-kitchen/baked-feta-pasta-9867689"
-        />
+          {
+            data.map((r) => { return <RecipeCard 
+              key={r._id}
+              title={r.title} 
+              description={r.description} 
+              image={r.img} 
+              recipeLink={r.url}></RecipeCard>})
+          }
       </div>
     </div>
   );
