@@ -1,7 +1,9 @@
 /* RecipeCard.css */
 .recipe-card {
     display: flex;
-    border: 1px solid #ddd;
+    border-style: solid;
+    border-color: #04070D;
+    border-width: 3px;
     border-radius: 8px;
     overflow: hidden;
     margin: 16px;
@@ -40,4 +42,4 @@
   .recipe-button:hover {
     background-color: #45a049;
   }
-  
+     
