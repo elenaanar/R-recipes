@@ -5,15 +5,13 @@ import { SearchBar } from "./Components/SearchBar";
 import Sidebar from "./Components/Sidebar";
 function App() {
   const [data, setData] = useState([]);
-  const [ingredients, setIngredients] = useState([
-    "milk",
-    "sugar",
-    "flour",
-    "salt",
-    "chicken",
-    "apple",
-    "banana",
-  ]);
+  const [items, setItems] = useState([]);
+  let localData = JSON.parse(localStorage.getItem("items"));
+  if (localData == null) {
+    localData = [];
+  }
+  const [ingredients, setIngredients] = useState(localData);
+  console.log(ingredients);
   return (
     <div className="App">
       <div className="top-bar"></div>
@@ -50,7 +48,12 @@ function App() {
           </div>
         </div>
       </div>
-      <Sidebar/>
+      <Sidebar
+        items={items}
+        setItems={setItems}
+        setIngredients={setIngredients}
+      />
+      {console.log(items)}
     </div>
   );
 }
