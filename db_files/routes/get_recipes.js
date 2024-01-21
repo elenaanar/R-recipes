@@ -82,6 +82,10 @@ routes.route("/search_recipes").get(async (req, res) => {
 routes.route("/get_recipes").get(async (req, res) => {
   db = dbo.getDb();
   collection = db.collection("all_recipes");
+    let q = req.query.ingredients;
+    if(q == null){
+        q = " "
+    }
   const query = [
     {
       $search: {
@@ -99,7 +103,6 @@ routes.route("/get_recipes").get(async (req, res) => {
     .then((r) => {
       return r;
     });
-  console.log(result);
   res.json(result);
 });
 

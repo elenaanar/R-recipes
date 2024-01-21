@@ -11,7 +11,7 @@ function App() {
   if (localData == null) {
     localData = [];
   }
-  const [ingredients, setIngredients] = useState(localData);
+  const [ingredients, setIngredients] = useState(localData || " ");
   useEffect(() => {
     const fetchData = async () => {
       const query = { ingredients: ingredients };
