@@ -79,4 +79,28 @@ routes.route("/search_recipes").get(async (req, res) => {
   res.json(result);
 });
 
+routes.route("/get_recipes").get(async (req, res) => {
+  db = dbo.getDb();
+  collection = db.collection("all_recipes");
+  const query = [
+    {
+      $search: {
+        index: "search",
+        text: {
+          query: req.query.ingredients,
+          path: ["ingredients"],
+        },
+      },
+    },
+  ];
+  let result = await collection
+    .aggregate(query)
+    .toArray()
+    .then((r) => {
+      return r;
+    });
+  console.log(result);
+  res.json(result);
+});
+
 module.exports = routes;
