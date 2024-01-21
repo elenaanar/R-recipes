@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import RecipeCard from "./Components/RecipeCard";
 import { SearchBar } from "./Components/SearchBar";
 import Sidebar from "./Components/Sidebar";
+import axios from "axios";
 function App() {
   const [data, setData] = useState([]);
   const [items, setItems] = useState([]);
@@ -11,7 +12,17 @@ function App() {
     localData = [];
   }
   const [ingredients, setIngredients] = useState(localData);
-  console.log(ingredients);
+  useEffect(() => {
+    const fetchData = async () => {
+        const query = { ingredients: ingredients };
+        const res = await axios.get("http://localhost:5010/get_recipes", {
+            params: query
+        });
+        setData(res.data);
+    }
+
+    fetchData();
+}, []);
   return (
     <div className="App">
       <div className="top-bar">
