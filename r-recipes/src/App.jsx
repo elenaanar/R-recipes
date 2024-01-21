@@ -14,10 +14,11 @@ function App() {
   console.log(ingredients);
   return (
     <div className="App">
-      <div className="top-bar"></div>
+      <div className="top-bar">
+      <div className="title-textbox">R'recipes</div>
+      </div>
       <div className="main-page">
         <div className="search-bar-container">
-          <div className="title-textbox">R'recipes</div>
           <SearchBar
             data={data}
             setData={setData}
@@ -40,7 +41,6 @@ function App() {
                   key={r._id}
                   title={r.title}
                   description={r.description}
-                  image={r.img}
                   recipeLink={r.url}
                 ></RecipeCard>
               );
