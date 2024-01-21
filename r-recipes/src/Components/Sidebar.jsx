@@ -4,12 +4,13 @@ import ItemList from './ItemList';
 import InputComponent from './InputComponent';
 import "../style.css"
 
-const Sidebar = () => {
-  const [items, setItems] = useState([]);
+const Sidebar = ({items, setItems, setIngredients}) => {
+  
 
   const handleAddItem = (item) => {
     // Update the items state with the new item
     setItems([...items, item]);
+    setIngredients(items);
   };
 
   return (
