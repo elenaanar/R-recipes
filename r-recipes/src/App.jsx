@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import RecipeCard from "./Components/RecipeCard";
 import { SearchBar } from "./Components/SearchBar";
+import Sidebar from "./Components/Sidebar";
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
           recipeLink="https://www.foodnetwork.com/recipes/food-network-kitchen/baked-feta-pasta-9867689"
         />
       </div>
+      <Sidebar/>
     </div>
   );
 }
