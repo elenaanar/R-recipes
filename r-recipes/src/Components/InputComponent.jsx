@@ -16,9 +16,14 @@ const InputComponent = ({ onAddItem }) => {
 
   const handleAddItem = () => {
     // Pass the input value to the parent component
-    var items = JSON.parse(localStorage.getItem('items'))
+
+    var items = JSON.parse(localStorage.getItem('items'));
+    if (items == null) {
+      items = []
+    }
     items.push(inputValue)
     localStorage.setItem('items', JSON.stringify(items))
+
     onAddItem(inputValue);
     // Clear input field
     setInputValue('');
