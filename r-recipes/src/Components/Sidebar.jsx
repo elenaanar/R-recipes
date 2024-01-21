@@ -7,11 +7,8 @@ import "../style.css"
 import TopBar from './TopBar';
 
 
-const Sidebar = () => {
-  const [items, setItems] = useState([]);
+const Sidebar = ({items, setItems, setIngredients}) => {
   const [open, setOpen] = useState(true);
-  const Sidebar = ({items, setItems, setIngredients}) => {
-
   const handleAddItem = (item) => {
     // Update the items state with the new item
     setItems([...items, item]);

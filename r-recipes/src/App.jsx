@@ -14,19 +14,20 @@ function App() {
   const [ingredients, setIngredients] = useState(localData);
   useEffect(() => {
     const fetchData = async () => {
-        const query = { ingredients: ingredients };
-        const res = await axios.get("http://localhost:5010/get_recipes", {
-            params: query
-        });
-        setData(res.data);
-    }
+      const query = { ingredients: ingredients };
+      const res = await axios.get("http://localhost:5010/get_recipes", {
+        params: query,
+      });
+      setData(res.data);
+    };
 
     fetchData();
-}, []);
+  }, []);
   return (
     <div className="App">
       <div className="main-page">
         <div className="search-bar-container">
+          <div className="title-textbox">R'recipes</div>
           <SearchBar
             data={data}
             setData={setData}
