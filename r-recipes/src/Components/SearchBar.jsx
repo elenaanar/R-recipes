@@ -2,6 +2,7 @@ import Reach, {useState} from 'react';
 import {FaSearch} from 'react-icons/fa';
 import './SearchBar.css'
 
+
 export const SearchBar = () =>  {
     const [input, setInput] = useState("")
     return(
