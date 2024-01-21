@@ -1,0 +1,62 @@
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+  }
+  
+
+  .indie-flower-regular {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+
+  .app-container {
+    display: flex;
+    justify-content: flex-end; /* Move content to the right */
+    align-items: center; /* Center content vertically */
+    padding: 0px;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+  }
+  
+  .sidebar-container {
+    flex-shrink: 0; /* Ensure the sidebar does not shrink */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally within the sidebar */
+    justify-content: flex-start; /* Start items at the top of the sidebar */
+    width: 300px; /* Set the width to your desired value */
+    height: 100%;
+    background-color: #09478d; /* Set the background color to your desired color */
+    color: #fff; /* Set the text color to contrast with the background */
+    
+  }
+  
+
+  .sidebar-container p.indie-flower-regular {
+    /* Apply the Indie Flower font to <p> elements within the sidebar */
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+  .inputcomponent-container{
+
+    margin-top: auto;
+    padding: 50px;
+
+
+  }
+
+ 
+
+  .sidebar-container .inputcomponent-container.indie-flower-regular {
+    /* Apply the Indie Flower font to .bottom-component within the sidebar */
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
