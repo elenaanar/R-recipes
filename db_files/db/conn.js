@@ -10,7 +10,7 @@ var _db;
 module.exports = {
     connectToServer: function (callback) {
         client.connect().then(r => {
-            _db = r.db("R'recipes");
+            _db = r.db("recipes");
             console.log("Successfully connected to MongoDB.");
         });
     },
